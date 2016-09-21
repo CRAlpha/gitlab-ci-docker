@@ -1,6 +1,10 @@
 FROM ruby:2.3
 MAINTAINER Bruce Shi <bruceshi@chinarenaissance.com>
 RUN apt-get update
+RUN locale-gen en_US.UTF-8  
+ENV LANG en_US.UTF-8  
+ENV LANGUAGE en_US:en  
+ENV LC_ALL en_US.UTF-8 
 RUN apt-get install -y git build-essential curl libpq-dev
 RUN apt-get install -y imagemagick ghostscript
 RUN curl -sL https://deb.nodesource.com/setup_4.x | bash -
