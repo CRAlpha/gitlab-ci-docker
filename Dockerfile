@@ -11,5 +11,4 @@ RUN apt-get update && apt-get install -y build-essential git curl libpq-dev \
   imagemagick ghostscript redis-server postgresql-client yarn nodejs
 RUN yarn global add phantomjs-prebuilt
 
-RUN gem sources --add https://ruby.taobao.org/ --remove https://rubygems.org/
 RUN gem install bundler --no-ri --no-rdoc
